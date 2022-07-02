@@ -24,7 +24,7 @@ for i in range(0, numPass):
 
 #password creation using each length
 for i in lengths:
-    password = ''.join(systemrandom.sample(all, i))
+    password = ''.join(systemrandom.choices(all, k=i))
     passwords.append(password)
 
 for i in passwords:

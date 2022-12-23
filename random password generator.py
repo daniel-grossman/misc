@@ -1,31 +1,17 @@
 #one of the first programs I ever wrote, and also one of my most-used
 
-import random
 import string
+import random
+import pyperclip
 
-#using an OS-dependent cryptographic RNG source
-systemrandom = random.SystemRandom()
+#using locally-dependent RNG
+systemRandom = random.SystemRandom()
+password = ''
 
-#'all' is a string of all possible letters, numbers etc.
-all = string.ascii_letters + string.digits + string.punctuation
+length = int(input('Enter password length: '))
 
-#these lists store password lengths + passwords
-lengths = []
-passwords = []
+for i in range(length):
+    password += systemRandom.choice(string.ascii_letters + string.digits + string.punctuation)
 
-#user input for num. of passwords
-numPass = int(input('Enter number of passwords: '))
-
-#user input for length of each password
-for i in range(0, numPass):
-    print('Enter password no. {} length: '.format(i+1))
-    lengt = int(input())
-    lengths.append(lengt)
-
-#password creation using each length
-for i in lengths:
-    password = ''.join(systemrandom.choices(all, k=i))
-    passwords.append(password)
-
-for i in passwords:
-    print(i)
+print(password)
+pyperclip.copy(password)

@@ -1,6 +1,6 @@
 #dumb password generator using scrabble dictionary, eventually want
 #to mathematically estimate likliehood of guessing password first try without using computer
-#WARNING: THIS CAN BE EASILY BRUTE-FORCED, DO NOT USE FOR ACTUAL PASSWORD MAKING
+#WARNING: THIS CAN BE BRUTE-FORCED, DO NOT USE FOR ACTUAL PASSWORD MAKING
 
 from random import SystemRandom
 from csv import reader

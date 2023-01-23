@@ -1,4 +1,4 @@
-#one of the first programs I ever wrote, and also one of my most-used
+#one of the first programs I ever wrote
 
 import string
 import random
